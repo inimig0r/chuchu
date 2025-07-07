@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuchu: Gerador de Escala de Trabalho</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="chuchu-header">
+  <div class="chuchu-header-main">
+    <img src="chuchuuu.png" alt="Ícone" class="chuchu-logo">
+    <span class="chuchu-title">C.H.U.C.H.U</span>
+  </div>
+  <div>
+    <span class="chuchu-subtitle">
+      <b>C</b>entral de <b>H</b>orários e <b>U</b>nidades de <b>C</b>oordenação de <b>H</b>umanos em <b>U</b>niforme
+    </span>
+  </div>
+</header>
+  <main>
+  <div class="config-box">
+    <label>Mínimo por dia: <input type="number" id="minPorDia" value="1" min="1" oninput="validarLimites()"></label>
+    <label>Máximo por dia: <input type="number" id="maxPorDia" value="3" min="1" oninput="usuarioAlterouMaximo=true;validarLimites()"></label>
+    <label>Dias por pessoa: <input type="number" id="diasPorPessoa" value="2" min="1"></label>
+    <label><input type="checkbox" id="evitarConsecutivos" checked>Evitar 3 dias seguidos</label>
+  </div>
+  <table id="membros">
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Segunda</th>
+        <th>Terça</th>
+        <th>Quarta</th>
+        <th>Quinta</th>
+        <th>Sexta</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody id="membros-body"></tbody>
+  </table>
+  <div class="actions">
+    <button onclick="adicionarMembro()">➕ Adicionar Membro</button>
+    <button onclick="gerarEscala()">Gerar Escala</button>
+    <button onclick="preencherAleatorio()">🎲 Preencher Aleatoriamente Dias</button>
+  </div>
+
+    <div id="mensagemErro" class="error"></div>
+    <div id="mensagemInfo" class="info"></div>
+
+    <h2>Resultado da Escala</h2>
+    <div class="download-actions">
+      <button id="btnAlternarVisualizacao">Alternar visualização</button>
+      <button onclick="baixarPDF()">⬇️ Baixar PDF</button>
+      <button onclick="baixarPNG()">⬇️ Baixar PNG</button>
+      <button onclick="baixarPlanilha()">⬇️ Baixar Planilha</button>
+      <button onclick="imprimirEscala()">🖨️ Imprimir/Salvar PDF</button>
+      <button id="btnImportarPlanilha">Importar Planilha</button>
+      <input type="file" id="inputImportarPlanilha" accept=".csv,.xlsx" style="display:none">
+    </div>
+    <table id="escala-table">
+      <thead>
+        <tr>
+          <th>Dia</th>
+          <th>Pessoas</th>
+        </tr>
+      </thead>
+      <tbody id="escala-body"></tbody>
+    </table>
+  </main>
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</body>
+</html>
