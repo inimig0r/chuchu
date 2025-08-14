@@ -16,5 +16,5 @@ O **CHUCHU** (Central de Horários e Unidades de Coordenação de Humanos em Uni
 
 ---
 
-![App Screenshot](https://i.imgur.com/Ncb3akK.png))
-![App Screenshot](https://i.imgur.com/CtkoIQY.png))
+![App Screenshot](https://i.imgur.com/Ncb3akK.png)
+![App Screenshot](https://i.imgur.com/CtkoIQY.png)
