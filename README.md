@@ -13,3 +13,8 @@ O **CHUCHU** (Central de Horários e Unidades de Coordenação de Humanos em Uni
 - ⚙️ Regras configuráveis para a alocação.
 - 📊 Visualização clara das escalas geradas.
 - 💡 Interface simples e intuitiva.
+
+---
+
+![App Screenshot](https://i.imgur.com/Ncb3akK.png))
+![App Screenshot](https://i.imgur.com/CtkoIQY.png))
